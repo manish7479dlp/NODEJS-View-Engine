@@ -1,2 +1,11 @@
 MiddleWare: Req aur Res ke bich ke kam karne wale ko MiddleWare kahte hai.
 app.use(express.static(path)) // build in MiddleWare
+
+Template Engine is used to serve dynamic content. (pug , hbs etc..)  but I use handlebars
+# handlebars ko use karne ke hamare pass ek view-engine hai hbs in express js
+install = npm i hbs
+
+Rules to use Template engine..
+
+1) Hamare root folder me "views" karke ek folder hona hi chahiye..
+2) 

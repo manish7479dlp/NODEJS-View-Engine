@@ -6,8 +6,18 @@ const staticPath = path.join(__dirname , "./public")
 // console.log(staticPath);
 const port = 8000;
 
-app.use(express.static(staticPath)); // buid in middleware..
+// to set the view engine
+app.set("view engine" , "hbs");
 
+// template engine route..
+
+app.get("/" , (req , res) => {
+    res.render("index" , {
+        name : "Manish Kumar"
+    })
+})
+
+// normal route
 app.get("/" , (req , res) => {
     res.send("hlw from the other side..")
 })
