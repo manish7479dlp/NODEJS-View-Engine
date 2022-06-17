@@ -1,0 +1,2 @@
+MiddleWare: Req aur Res ke bich ke kam karne wale ko MiddleWare kahte hai.
+app.use(express.static(path)) // build in MiddleWare
