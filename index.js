@@ -1,10 +1,12 @@
 const express = require("express")
 const path = require("path")
+const hbs = require("hbs");
 
 const app = express();
 const staticPath = path.join(__dirname , "./public");
-const templatePath = path.join(__dirname , "./template");
-console.log(templatePath);
+const templatePath = path.join(__dirname , "./template/views");
+const partialsPath = path.join(__dirname , "./template/partials");
+
 const port = 8000;
 
 // to set the view engine
@@ -12,6 +14,9 @@ app.set("view engine" , "hbs");
 
 // to change views name.
 app.set("views" , templatePath)
+
+// to set partials.
+hbs.registerPartials(partialsPath);
 
 // template engine route..
 
