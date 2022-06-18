@@ -8,4 +8,7 @@ install = npm i hbs
 Rules to use Template engine..
 
 1) Hamare root folder me "views" karke ek folder hona hi chahiye..
-2) 
+
+How to change Template engine name
+
+app.set("views" , "pathName");
