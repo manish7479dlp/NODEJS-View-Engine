@@ -26,9 +26,23 @@ app.get("/" , (req , res) => {
     })
 })
 
+app.get("/about" , (req , res) => {
+    res.render("about");
+})
+
 // normal route
 app.get("/" , (req , res) => {
     res.send("hlw from the other side..")
+})
+
+app.get("/about*" , (req , res) => {
+    res.send("page not found...876")
+})
+
+app.get("*" , (req , res) => {
+    res.render("404" , {
+        errorComment: "404 Page not found.."
+    });
 })
 
 app.listen(port , () => {
